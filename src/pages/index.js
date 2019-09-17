@@ -5,4 +5,11 @@ import ReactDOM from "react-dom"
 
 // import "../css/style.css";
 
-ReactDOM.render(<LandingPage />, document.getElementById('root'))
+// ReactDOM.render(<LandingPage />)
+
+export default () => (
+    <div className="wrapper">
+        <LandingPage />
+    </div>
+);
+
