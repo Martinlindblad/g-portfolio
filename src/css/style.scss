@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900&display=swap");
 $font-stack: "Montserrat", sans-serif;
 $primary-color: #b7ac7f;
-$secondary-color: rgba(255, 255, 255, 0.782);
+$primary-color-circle: #b7ac7fcb;
+$secondary-color: rgba(255, 255, 255, 0.89);
 
 @mixin glow(
   $name,
@@ -51,12 +52,27 @@ body {
     top: 0;
     left: 0;
     opacity: 1;
-    background-image: linear-gradient(to bottom right, #b0c6d39c, white);
+    font-weight: bolder;
+    // background-image: linear-gradient(to bottom right, #b0c6d39c, white);
     display: grid;
+    background: #0f0c29; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #24243e,
+      #302b63,
+      #0f0c29
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #24243e,
+      #302b63,
+      #0f0c29
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     h1.ml8 {
-      font-weight: 900;
+      font-weight: bolder;
       font-size: 4.5em;
-      color: #fff;
+      color: white;
       width: 3em;
       height: 3em;
       text-align: center;
@@ -78,8 +94,8 @@ body {
       z-index: 2;
       display: inline-block;
       line-height: 0.7em;
-      right: -0.12em;
-      top: -0.2em;
+      right: -0em;
+      top: -0.15em;
     }
 
     .ml8 .bang {
@@ -100,7 +116,6 @@ body {
     .ml8 .circle-white {
       width: 3em;
       height: 3em;
-      border: 2px dashed white;
       border-radius: 2em;
     }
 
@@ -108,6 +123,10 @@ body {
       width: 2.5em;
       height: 2.5em;
       background-color: $primary-color;
+      box-shadow: inset 0 0 50px #fff, inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff, inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff, 0 0 50px #fff, -10px 0 80px #f0f,
+        10px 0 80px #0ff;
       border-radius: 3em;
       z-index: 1;
     }
@@ -115,7 +134,7 @@ body {
     .ml8 .circle-dark-dashed {
       border-radius: 2.4em;
       background-color: transparent;
-      border: 5px double;
+      border: 10px double;
       border-color: $primary-color white $primary-color white;
       width: 2.6em;
       height: 2.6em;
@@ -153,14 +172,13 @@ body {
     }
   }
 }
-.hej{
-    position: relative;
-    top: 25;
-    left: 25;
-    margin: 0% auto;
-    z-index: 500;
-    color: white;
-    padding: 5px;
-    font-family: $font-stack;
- 
+.hej {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  margin: 0% auto;
+  z-index: 500;
+  color: rgb(179, 28, 28);
+  padding: 5px;
+  font-family: $font-stack;
 }
