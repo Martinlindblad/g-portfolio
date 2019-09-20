@@ -172,13 +172,26 @@ body {
     }
   }
 }
-.hej {
-  position: relative;
-  top: 25%;
-  left: 25%;
-  margin: 0% auto;
-  z-index: 500;
-  color: rgb(179, 28, 28);
-  padding: 5px;
-  font-family: $font-stack;
+body{
+  height: 120vh;
+}
+.wow {
+position: fixed;
+}
+.cls-1,
+.cls-3 {
+    fill: #fff;
+}
+.cls-1,
+.cls-2,
+.cls-4 {
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+}
+.cls-2 {
+    fill: #b7ac7f;
+}
+.cls-4 {
+    fill: none;
 }
