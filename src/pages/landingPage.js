@@ -1,6 +1,7 @@
 import React from "react"
 // import { Spring } from "react-spring/renderprops"
 import { useSpring, animated } from "react-spring"
+import "../css/landingPage.scss"
 
 const LandingPage = () => {
   // const spin = useSpring({
@@ -38,48 +39,52 @@ const LandingPage = () => {
   const textPopAnimation = useSpring({
     to: async next => {
       await next({ opacity: 1 })
-      await next({ transform: "scale(0.9)"})
-      await next({ fontWeight: "small"})
-      await next({ transform: "scale(1.1)"})
-      await next({ fontWeight: "bolder"})
-      await next({ transform: "scale(1)"})
+      await next({ transform: "scale(0.9)" })
+      await next({ fontWeight: "small" })
+      await next({ transform: "scale(1.1)" })
+      await next({ fontWeight: "bolder" })
+      await next({ transform: "scale(1)" })
     },
-    from: { fontWeight: "bolder", opacity: 0, transform: "scale(1)", easing: "ease-in-out" },
+    from: {
+      fontWeight: "bolder",
+      opacity: 0,
+      transform: "scale(1)",
+      easing: "ease-in-out",
+    },
     config: { duration: 300 },
     delay: 1000,
   })
 
   return (
-    <animated.div>
-      <animated.h1 className="ml8">
-        <animated.span className="letters-container">
-          <animated.span
-            style={textPopAnimation}
-            className="letters letters-left"
-          >
-            M
-            <animated.span style={spinKanji} className="letters bang">
-              真灯
+    <div className="wrapper">
+      <animated.div>
+        <animated.h1 className="ml8">
+          <animated.span className="letters-container">
+            <animated.span
+              style={textPopAnimation}
+              className="letters letters-left"
+            >
+              M
+              <animated.span style={spinKanji} className="letters bang">
+                真灯
+              </animated.span>
+              L
             </animated.span>
-            L
           </animated.span>
-        </animated.span>
-        <animated.span
-          
-          className="circle circle-white"
-        ></animated.span>
-        <animated.span
-          style={goldCircleFade}
-          className="circle circle-dark"
-        ></animated.span>
-        <animated.span className="circle circle-container">
+          <animated.span className="circle circle-white"></animated.span>
           <animated.span
-            style={spinDouble}
-            className="circle circle-dark-dashed"
+            style={goldCircleFade}
+            className="circle circle-dark"
           ></animated.span>
-        </animated.span>
-      </animated.h1>
-    </animated.div>
+          <animated.span className="circle circle-container">
+            <animated.span
+              style={spinDouble}
+              className="circle circle-dark-dashed"
+            ></animated.span>
+          </animated.span>
+        </animated.h1>
+      </animated.div>
+    </div>
   )
 }
 
