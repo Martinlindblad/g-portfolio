@@ -1,8 +1,10 @@
 import React,{ Component } from "react";
 import SvgLogo from "../components/svg/logoSvg.js"
 import BurgerMenu from "../components/burgerMenu/burgerMenu.js"
+import Tiles from "../components/banner/banner.js"
 import '../css/frontPage.scss'
 import '../css/burgerMenu.scss'
+import '../css/tiles.scss'
 
 
 class FrontPage extends Component{
@@ -28,6 +30,7 @@ class FrontPage extends Component{
         <div>
             <SvgLogo />
             <BurgerMenu />
+            <Tiles />
         </div>
             )
 

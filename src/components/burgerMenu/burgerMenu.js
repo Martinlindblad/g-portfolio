@@ -4,7 +4,7 @@ class BurgerMenu extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      menuOpen: true,
+      menuOpen: false,
     }
   }
   handleMenuClick() {
@@ -30,7 +30,7 @@ class BurgerMenu extends React.Component {
         display: "flex",
       },
     }
-    const menu = ['About Us','Our Products','Services','FAQ','Contact Us']
+    const menu = ['Home','About', 'Me', 'Contact']
     const menuItems = menu.map((val, index) => {
       return (
         <MenuItem
@@ -45,12 +45,11 @@ class BurgerMenu extends React.Component {
       )
     })
     return (
-      console.log(menuItems),
       (
-        <div style={styles.burger}>
+        <div style={styles.burger} onClick={()=> {this.handleMenuClick()}}>
           <MenuButton
             open={this.state.menuOpen}
-            onClick={() => this.handleLinkClick()} // Burger Lines
+            onClick={function(){ this.handleLinkClick()}} // Burger Lines
           ></MenuButton>
           <Menu open={this.state.menuOpen}>{menuItems}</Menu>
          
@@ -89,9 +88,8 @@ class MenuItem extends React.Component {
       },
     }
     return (
-      console.log(this.props.children),
       <li
-        style={styles.menuLi}
+        style={styles.navLi}
         onMouseEnter={() => {
           this.handleHover()
         }}
@@ -118,6 +116,7 @@ class Menu extends React.Component {
       this.setState({ open: nextProps.open })
     }
   }
+
   render() {
     const styles = {
       nav: {
@@ -131,17 +130,17 @@ class Menu extends React.Component {
         padding: "100px 40px 60px 40px",
         overflowY: "auto",
         transition: "transform 0.55s cubic-bezier(0.785, 0.135, 0.15, 0.86)",
-        transform: "translateX(0%)",
+        transform: this.state.open? "translateX(0%)": "translateX(100%)",
       },
       ul: {
         listStyleType: "none",
       },
     }
     return (
-      <nav style={styles.nav}>
+      <nav style={styles.nav} >
         {this.state.open ? (
           <ul style={styles.ul}>
-            
+            {this.props.children}
           </ul>
         ) : (
           null
@@ -154,12 +153,12 @@ class Menu extends React.Component {
 class MenuButton extends React.Component {
   constructor(props) {
     super(props)
-    {
-      // this.state = {
-      //   open: this.props.open ? this.props.open : false,
-      //   color: this.props.open ? this.props.open : "#b7ac7f",
-      // }
+    this.state = {
+      open: this.props.open ? this.props.open : false,
+      color: this.props.open ? this.props.open : "#b7ac7f",
     }
+
+    this.handleClick = this.handleClick.bind(this);
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.open !== this.state.open) {
@@ -187,6 +186,7 @@ class MenuButton extends React.Component {
         height: "4px",
         width: "100%",
         background: "#3E4651",
+        zIndex: '100'
       },
       line1: {
         backgroundColor: "#b7ac7f",
@@ -218,13 +218,7 @@ class MenuButton extends React.Component {
     return (
       <div
         style={styles.hamburger}
-        onClick={
-          this.props.onClick
-            ? this.props.onClick
-            : () => {
-                this.handleClick()
-              }
-        }
+        onClick={this.handleClick}
       >
         <div style={{ ...styles.line, ...styles.line4 }}></div>
         <div style={{ ...styles.line, ...styles.line3 }}></div>

@@ -1,9 +1,10 @@
 body {
-  height: 120vh;
+  height: 200vh;
   margin: 0% auto;
   // background-image: linear-gradient(to  right, #b0c6d3d7, rgb(255, 241, 241),#b0c6d3d7);
   background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%); 
   background-attachment: fixed;
+  overflow: scroll;
   overflow-x: hidden;
 }
 .bgSvg {

@@ -39,7 +39,6 @@ $secondary-color: rgba(255, 255, 255, 0.89);
 body {
   font: 100% $font-stack;
   color: $primary-color;
-  overflow: hidden;
   box-sizing: border-box;
 
   .wrapper {

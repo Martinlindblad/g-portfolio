@@ -14,7 +14,7 @@ export default () => (
     // <div>
     //  <LandingPage /> 
     //  </div> 
-    <div>
+    <div className="indexContainer">
       <FrontPage />
     </div>
 );
