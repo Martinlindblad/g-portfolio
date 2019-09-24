@@ -4,6 +4,8 @@ body {
   // background-image: linear-gradient(to  right, #b0c6d3d7, rgb(255, 241, 241),#b0c6d3d7);
   background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%); 
   background-attachment: fixed;
+
+
   overflow: scroll;
   overflow-x: hidden;
 }
@@ -34,7 +36,8 @@ svg .cls-1,.cls-4, .cls-3 {
 
 
 .scrolled {
-  opacity: 1;
+  opacity: 0;
+  transition: all ease-in-out 1s;
 }
 .cls-1,
 .cls-3 {
@@ -72,4 +75,8 @@ svg .cls-1,.cls-4, .cls-3 {
   svg {
     width: 50vw;
   }
+}
+
+.SpaceMaker{
+  height: 70vh;
 }

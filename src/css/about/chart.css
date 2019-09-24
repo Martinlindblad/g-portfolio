@@ -1,0 +1,18 @@
+.chartJS{
+    grid-column: 2 / span 1;
+    grid-row: first-line / 3;
+    width: 20vw;
+    max-width: 20vw;
+}
+.chartHTMLCSS{
+    grid-column: 5;
+    grid-row: first-line / 3;
+    width: 20vw;
+    max-width: 20vw;
+}
+.chartOther{
+    grid-column: 7;
+    grid-row: first-line / 3;
+    width: 20vw;
+    max-width: 20vw;
+}

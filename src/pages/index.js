@@ -1,20 +1,23 @@
-import React from "react";
-// import LandingPage from "../pages/landingPage.js";
-// import { LandingPageCss } from './LandingPageCss'
-// import { FrontPageCss } from './FrontPageCss'
-// import "../css/style.scss"
-import FrontPage from "./frontPage.js";
+import React, { Suspense } from "react";
+import LandingPage from './landingPage';
 
 
-// import "../css/style.css";
-
-// ReactDOM.render(<LandingPage />)
+const FrontPage = React.lazy(() => {
+    return new Promise(resolve => setTimeout(resolve, 3 * 1000)).then(
+      () =>
+          import("./frontPage.js")
+ 
+    );
+  });
 
 export default () => (
+
     // <div>
     //  <LandingPage /> 
     //  </div> 
     <div className="indexContainer">
-      <FrontPage />
+    <Suspense fallback={<LandingPage />}>
+    <FrontPage />
+    </Suspense>
     </div>
 );

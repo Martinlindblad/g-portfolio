@@ -11,7 +11,7 @@ class ScrollToggle extends Component {
     componentDidMount() {
         window.addEventListener('scroll', () => {
             const isTop = window.scrollY < 90;
-            const bgSvg = document.getElementById('svg')
+            const bgSvg = document.getElementById('bgSvg')
             if(isTop !== true){
                 bgSvg.classList.add('scrolled');
             }
@@ -21,9 +21,9 @@ class ScrollToggle extends Component {
         })
     }
     
-    componentWillUnmount() {
-        window.removeEventListener('scroll')
-    }
+    // componentWillUnmount() {
+    //     window.removeEventListener('scroll')
+    // }
     
     render() {
     	return (

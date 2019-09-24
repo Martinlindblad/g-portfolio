@@ -66,7 +66,7 @@ const LandingPage = () => {
             >
               M
               <animated.span style={spinKanji} className="letters bang">
-                真灯
+              マーチン
               </animated.span>
               L
             </animated.span>
