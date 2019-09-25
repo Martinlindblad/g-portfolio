@@ -1,24 +1,26 @@
 import React from 'react'
 
-import Delay from 'react-delay-render';
+import { useSpring, animated } from "react-spring"
 
 // import { useSpring, animated } from "react-spring"
 import Profile from './profile.js'
-import DoughnutChartJS from '../about/chart/chartJS.js'
-import DoughnutChartHTMLCSS from '../about/chart/chartHCSS.js'
-import DoughnutChartOther from '../about/chart/chartOther.js'
+
+import GatherChart from '../about/chart/chartGather.js'
 import '../../css/about/about.css'
 
 const About = () => {
+    const goldCircleFade = useSpring({
+        to: [{ opacity: "1",transform: "scale(1)" , config: { duration: 1000 } }],
+        from: { opacity: "0",transform: "scale(1.4)", easing: "easeOutExpo" },
+        delay: 300,
+      })
     return(
         
-        <div className="about-container">
-            <h3>Front-end Experience</h3>
+        <animated.div style={goldCircleFade} className="about-container">
+        
             <Profile />
-            <DoughnutChartJS />
-            <DoughnutChartHTMLCSS />
-            <DoughnutChartOther />
-        </div>
+            <GatherChart />
+        </animated.div>
 
     )
 }

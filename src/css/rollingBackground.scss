@@ -1,0 +1,19 @@
+$bgColor:#001628;
+
+.bkg-animated {
+    background-color: $bgColor;
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    height: 50vh;
+    box-sizing: border-box;
+    position: static;
+    background-color: $bgColor;
+    transform: translateY(20vh); 
+    border-top: 1px solid #fff;
+
+}
+  
+  @keyframes opacity { 
+    85%, 100% { opacity: 0; } 
+  }

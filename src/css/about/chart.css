@@ -4,7 +4,7 @@
     width: 20vw;
     max-width: 20vw;
     animation: all 1.4s cubic-bezier(.25, .25, .25, 1.25);
-
+    
 }
 .chartHTMLCSS{
     grid-column: 5;

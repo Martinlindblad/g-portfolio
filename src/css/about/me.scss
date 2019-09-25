@@ -1,0 +1,64 @@
+.me-container{
+    display: grid;
+    margin: 10% auto;
+    grid-template-columns: 10vw 10vw 10vw 10vw 20vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 15vh 15vh 15vh 15vh;
+    height: 60vh;
+     /* background-color: #2a2a2ad0;
+    background-color: #17141d; */
+    // background-color: #001628;
+    /* opacity: 0; */
+}
+
+button{
+    grid-column: 6;
+    grid-row: 1;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 100;
+    border-radius: 50%;
+    border-color: #b7ac7f;
+    border: 1px solid #b7ac7f;
+    color: #b7ac7f;
+    width: 5vw;
+    height: 10vh;
+    box-shadow:  1px 1px 1px 1px  #b7ac7f;
+    background-color: #001628;
+    transition: all .5s ease;
+    transform-style: preserve-3d;
+    &:hover{
+        transform: rotateX(-20deg) scale(1.125);
+    }
+}
+
+.content{
+    grid-column: 1/10;
+    grid-row: 1/5;
+    grid-template-columns: 10vw 10vw 10vw 10vw 20vw 10vw 10vw 10vw 10vw;
+    grid-template-rows: 15vh 15vh 15vh 15vh;
+    display: grid;
+}
+
+.japaneseChart{
+    grid-column: 6;
+    grid-row: 2;
+    width: 30vw;
+  
+}
+
+
+ul{
+    width: 30vw;
+    height: 100%;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+li{
+    font-size: 0.5rem;
+    padding: 2px;
+}
+
+h5{
+    font-size: 2rem;
+}

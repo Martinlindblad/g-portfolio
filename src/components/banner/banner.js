@@ -63,10 +63,12 @@ class TileItem extends React.Component {
         height: "20vh",
         margin: "0 auto",
         textAlign: "center",
+        boxShadow: '0px 1px 0px'
+
       },
       titles:{
         fontSize: "2rem",
-        transform: 'translateY(5vh)'
+        transform: 'translateY(5vh)',
       }
     }
     return (

@@ -2,6 +2,7 @@
 
 @for $i from 1 through 3 {
   .tile {
+
     &:nth-child(#{$i}) {
       
       // Delay the animation. Delay increases as items loop.

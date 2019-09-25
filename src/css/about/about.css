@@ -3,12 +3,12 @@
     margin: 10% auto;
     grid-template-columns: 10vw 10vw 10vw 10vw 20vw 10vw 10vw 10vw 10vw;
     grid-template-rows: 25vh 25vh 25vh 25vh;
-    height: 100vh;
+    height: 130vh;
      /* background-color: #2a2a2ad0;
     background-color: #17141d; */
     background-color: #001628;
-    transition: all ease-in-out 2s;
     /* opacity: 0; */
+    margin-bottom: 0%;
 }
 @keyframes fade-in {
     0% {

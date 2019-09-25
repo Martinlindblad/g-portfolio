@@ -3,11 +3,12 @@ import SvgLogo from "../components/svg/logoSvg.js"
 import BurgerMenu from "../components/burgerMenu/burgerMenu.js"
 import Tiles from "../components/banner/banner.js"
 import About from "../components/about/about.js"
+import Me from "../components/about/me.js"
 import RollingBackground from "../components/banner/rollingBackground.js";
 import '../css/frontPage.scss'
 import '../css/burgerMenu.scss'
 import '../css/tiles.scss'
-import '../css/rollingBackground.css'
+import '../css/rollingBackground.scss'
 
 
 
@@ -20,8 +21,7 @@ class FrontPage extends Component {
     }
     isAboutIn() {
         window.addEventListener('scroll', () => {
-            const isTop = window.scrollY > window.innerHeight * 0.5;  
-            console.log(window.offsetHeight);          ;
+            const isTop = window.scrollY > window.innerHeight * 0.4;  
             if (isTop === true) {
                 if (this.state.post !== true) {
                     this.setState({ post: true })
@@ -52,6 +52,7 @@ class FrontPage extends Component {
                     ? <About />
                     : null
                 }
+                <Me />
             </div>
 
         )

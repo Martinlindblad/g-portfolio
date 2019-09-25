@@ -1,0 +1,47 @@
+$bgColor: #1c323d;
+
+.intro-container {
+    grid-column: 2;
+    grid-row: 4;
+    width: 40vw;
+    max-width: 50vw;
+    animation: all 1.4s cubic-bezier(.25, .25, .25, 1.25);
+    color: #fff;
+}
+
+.text{
+    position: relative;
+    width: 100%;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    will-change: transform, opacity;
+    overflow: hidden;
+}
+
+h4{
+    font-size: 3em;
+}
+
+.githubLink{
+    height: 200px;
+    width: 200px;
+    grid-column: 6;
+    grid-row: 5;
+    // width: 30vw;
+    background: rgba(255, 255, 255, 0.857); 
+    // background:linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%); 
+    border-radius: 50%;
+    transition: all ease-in-out 0.3s;
+    
+    &:hover{
+        background: #fff; 
+        cursor: pointer;
+        transform: rotateX(-20deg) scale(1.050);
+    }
+    img{
+        height: 200px;
+        width: 200px;
+    }
+        
+}
