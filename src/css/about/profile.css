@@ -10,17 +10,7 @@
     transform: translateY(-20%);
     animation: all 1.4s cubic-bezier(.25, .25, .25, 1.25);
   }
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-      transform: translateX(50%) scale(0) rotateZ(-60deg);
-    }
-    
-    100% {
-      opacity: 1;
-      transform: translateX(0) scale(1) rotateZ(0deg);
-  }
-  }
+ 
   
   .profile *,
   .profile:before,

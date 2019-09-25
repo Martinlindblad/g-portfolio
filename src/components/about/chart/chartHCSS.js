@@ -1,5 +1,7 @@
 import React from "react"
 
+
+
 import '../../../css/about/chart.css'
 
 var Chart = require("chart.js")

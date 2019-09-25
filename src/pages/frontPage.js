@@ -18,16 +18,24 @@ class FrontPage extends Component {
             post: false,
         };
     }
-    renderAbout(){
-
+    isAboutIn() {
         window.addEventListener('scroll', () => {
-            const isTop = window.scrollY < window.innerHeight + 50;
-            if(isTop){
-                this.setState({
-                    post: true,
-                })
+            const isTop = window.scrollY > window.innerHeight * 0.5;  
+            console.log(window.offsetHeight);          ;
+            if (isTop === true) {
+                if (this.state.post !== true) {
+                    this.setState({ post: true })
+                }
+            }
+            else {
+                if (this.state.post !== false) {
+                    this.setState({ post: false })
+                }
             }
         });
+    }
+    componentDidMount() {
+        this.isAboutIn();
     }
 
 
@@ -40,7 +48,10 @@ class FrontPage extends Component {
                 <BurgerMenu />
                 <div className="SpaceMaker"></div>
                 <RollingBackground />
-                <About />
+                {this.state.post
+                    ? <About />
+                    : null
+                }
             </div>
 
         )

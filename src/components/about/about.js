@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Delay from 'react-delay-render';
+
 // import { useSpring, animated } from "react-spring"
 import Profile from './profile.js'
 import DoughnutChartJS from '../about/chart/chartJS.js'
@@ -9,6 +11,7 @@ import '../../css/about/about.css'
 
 const About = () => {
     return(
+        
         <div className="about-container">
             <h3>Front-end Experience</h3>
             <Profile />
