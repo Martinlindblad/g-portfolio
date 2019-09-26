@@ -1,23 +1,33 @@
-import React, { Suspense } from "react";
+import React, { Component } from 'react'
 import LandingPage from './landingPage';
+import FrontPage from "./frontPage.js"
 
+class Index extends Component {
+  constructor() {
+    super();
+    this.state = {
+        post: false,
+    }
+} 
 
-const FrontPage = React.lazy(() => {
-    return new Promise(resolve => setTimeout(resolve, 3 * 1000)).then(
-      () =>
-          import("./frontPage.js")
+    didRender() {
+      setTimeout(function(){ 
+        this.setState({ post: true })
+    }.bind(this), 3000);
+  }
+    
+    componentDidMount() {
+      this.didRender()
+  }
+  render() {
+    return(
+
+      <div className="indexContainer">
+       {this.state.post ? <FrontPage />: <LandingPage />}
  
-    );
-  });
-
-export default () => (
-
-    // <div>
-    //  <LandingPage /> 
-    //  </div> 
-    <div className="indexContainer">
-    <Suspense fallback={<LandingPage />}>
-    <FrontPage />
-    </Suspense>
     </div>
-);
+                  )
+  }
+  }
+
+export default Index
