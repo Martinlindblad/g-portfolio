@@ -1,4 +1,5 @@
 import React from "react"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 class Tiles extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class Tiles extends React.Component {
         bottom: '7vh'
       },
     }
+    let tooSmall = window.screen.width;
     const title = ["About", "Me", "Contact"]
     const titels = title.map((val, index) => {
       return (
@@ -41,7 +43,7 @@ class Tiles extends React.Component {
         </TileItem>
       )
     })
-    return <div style={styles.container}>{titels}</div>
+    return <div  className="tile-container" style={styles.container}>{titels}</div>
   }
 }
 
@@ -73,7 +75,9 @@ class TileItem extends React.Component {
     }
     return (
       <div style={styles.tiles}>
+        <AnchorLink href={'#'+this.props.children}>
         <h2 style={styles.titles}className="tile">{this.props.children}</h2>
+      </AnchorLink>
       </div>
     )
   }

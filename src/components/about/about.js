@@ -16,7 +16,7 @@ const About = () => {
       })
     return(
         
-        <animated.div style={goldCircleFade} className="about-container">
+        <animated.div style={goldCircleFade} id="About" className="about-container">
         
             <Profile />
             <GatherChart />

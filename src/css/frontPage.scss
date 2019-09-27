@@ -56,27 +56,31 @@ svg .cls-1,.cls-4, .cls-3 {
 .cls-4 {
   fill: none;
 }
-@media screen and (min-width: 700px) {
+.SpaceMaker{
+  height: 60vh;
+}
+@media screen and (max-width: 600px) {
   svg {
     width: 70vw;
   }
+  
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
   svg {
     width: 100vw;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   svg {
     width: 70vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   svg {
     width: 50vw;
   }
 }
 
-.SpaceMaker{
-  height: 60vh;
+.hide{
+  opacity: 0;
 }

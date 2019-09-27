@@ -4,22 +4,7 @@ import { useSpring, animated } from "react-spring"
 import "../css/landingPage.scss"
 
 const LandingPage = () => {
-  // const spin = useSpring({
-  //   to: [
-  //     {
-  //       transform: "translate3d(0px,0,0) scale(5) rotate(3600deg)",
-  //       config: { duration: 300 },
-  //       boxShadow: "0px 0px 0px #fdec6e",
-  //       opacity: "0",
-  //     },
-  //   ],
-  //   from: {
-  //     transform: "translate3d(0px,0,0) scale(0) rotate(0deg)",
-  //     boxShadow: "0px 0px 30px #fdec6e",
-  //     opacity: "1",
-  //     easing: "easeOutExpo",
-  //   },
-  // })
+
   const spinDouble = useSpring({
     to: [
       { opacity: "1", transform: "rotate(500deg)", config: { duration: 2000 } },

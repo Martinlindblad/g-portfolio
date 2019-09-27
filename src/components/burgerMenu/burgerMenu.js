@@ -1,5 +1,5 @@
 import React from "react"
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 class BurgerMenu extends React.Component {
   constructor(props) {
     super(props)
@@ -88,7 +88,7 @@ class MenuItem extends React.Component {
       },
     }
     return (
-      <li
+       <AnchorLink href={'#'+this.props.children}> <li
         style={styles.navLi}
         onMouseEnter={() => {
           this.handleHover()
@@ -99,7 +99,7 @@ class MenuItem extends React.Component {
         onClick={this.props.onClick}
       >
         {this.props.children}
-      </li>
+      </li> </AnchorLink> 
     )
   }
 }
