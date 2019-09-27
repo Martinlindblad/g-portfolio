@@ -27,7 +27,6 @@ class Tiles extends React.Component {
         bottom: '7vh'
       },
     }
-    let tooSmall = window.screen.width;
     const title = ["About", "Me", "Contact"]
     const titels = title.map((val, index) => {
       return (
