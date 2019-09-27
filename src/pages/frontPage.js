@@ -10,13 +10,6 @@ import '../css/tiles.scss'
 import '../css/rollingBackground.scss'
 import Contact from "../components/contact/contact.js";
 
-function hide() {
-
-    if(window.screen.width> 700) {
-        document.querySelector(".tile-container").classList.add('hide')
-    }
-}
-
 
 
 class FrontPage extends Component {
