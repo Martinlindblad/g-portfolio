@@ -30,15 +30,17 @@
         width: 20vw;
         max-width: 20vw;
         animation: all 1.4s cubic-bezier(.25, .25, .25, 1.25);
+        display: none;
         
     }
     .chartHTMLCSS{
         grid-column: 5;
+        display: none;
         grid-row: first-line / 3;
         width: 20vw;
         max-width: 20vw;
         animation: all 1.4s cubic-bezier(.25, .25, .25, 1.25);
-    
+        
     }
     .chartOther{
         grid-column: 7;
@@ -46,6 +48,7 @@
         width: 20vw;
         max-width: 20vw;
         animation: all 1.4s cubic-bezier(.25, .25, .25, 1.25);
+        display: none;
         
     }
 }

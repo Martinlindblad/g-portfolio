@@ -62,3 +62,27 @@ li{
 h5{
     font-size: 2rem;
 }
+
+
+@media screen and (max-width: 600px) {
+    .japaneseChart{
+  display: none;
+      
+    }
+    .me-container{
+        height: 100%;
+        margin-top:50%;
+        display: block;
+        position: relative;
+        button{
+            font-size: 4rem;
+            position: relative;
+            width: 20vw;
+            height: auto;
+        }
+    }
+    .content{
+        font-size: 1rem;
+        margin-top: 0%;
+    }
+    }
