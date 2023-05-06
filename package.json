@@ -21,7 +21,7 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "chart.js": "^2.8.0",
     "font-awesome": "^4.7.0",
-    "gatsby": "^2.15.16",
+    "gatsby": "^5.9.0",
     "gatsby-plugin-sass": "^2.1.14",
     "react": "^16.9.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
